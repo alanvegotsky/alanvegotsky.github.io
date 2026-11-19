@@ -268,3 +268,63 @@ body {
   .aff-text { animation: none; }
   .ring-fill.running { animation: none !important; }
 }
+
+/* Media embeds */
+.media-block {
+  margin-top: 28px;
+}
+.media-title {
+  font-family: var(--ds-font-display);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0 0 6px;
+}
+.media-note {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ds-ink-2);
+  margin: 0 0 12px;
+  max-width: 460px;
+}
+.media-frame {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--ds-lift);
+  background: #000;
+}
+.media-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.part-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+  max-width: 560px;
+}
+.part-picker button {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--ds-hairline);
+  background: var(--ds-white);
+  color: var(--ds-ink-2);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.part-picker button:hover { border-color: var(--ds-teal); color: var(--ds-ink); }
+.part-picker button.active {
+  background: var(--ds-teal);
+  border-color: var(--ds-teal);
+  color: #fff;
+}

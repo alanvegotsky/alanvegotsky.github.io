@@ -124,3 +124,33 @@
   render();
   startTimer();
 })();
+
+/* Audiobook part picker */
+(function () {
+  var PARTS = [
+    { id: 'C8ZDv8vftiw', label: 'Part 1' },
+    { id: 'KGq77dqSYgo', label: 'Part 2' },
+    { id: '7ks--C7Ehbk', label: 'Part 3' },
+    { id: 'fvVHe4TIKTo', label: 'Part 4' },
+    { id: '6U7EuKn1Go0', label: 'Part 5' },
+    { id: 'MKmWjiAefs4', label: 'Part 6' },
+    { id: 'KFQ02L3u5-Y', label: 'Part 7' },
+    { id: 'bCmPiE8jHZ8', label: 'Part 8' },
+    { id: 'Bmfo9JJqmKM', label: 'Part 9' }
+  ];
+  var picker = document.getElementById('part-picker');
+  var frame = document.getElementById('audiobook-frame');
+  if (!picker || !frame) return;
+  PARTS.forEach(function (part, i) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = part.label;
+    if (i === 0) btn.classList.add('active');
+    btn.addEventListener('click', function () {
+      frame.src = 'https://www.youtube-nocookie.com/embed/' + part.id + '?autoplay=1';
+      picker.querySelectorAll('button').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+    });
+    picker.appendChild(btn);
+  });
+})();
