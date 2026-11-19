@@ -46,7 +46,23 @@
     'You do not have to carry everything today.',
     'Your best is allowed to look different every day.',
     'There is time. More than it feels like.',
-    'Right now, in this breath, you are okay.'
+    'Right now, in this breath, you are okay.',
+    'I am my own best friend.',
+    'I am loved and love myself.',
+    'I am the master of my destiny, and my mission is my guide.',
+    'I imagine myself being the person I want to be.',
+    'I am living in awe of life.',
+    'I wake up and that is good enough for me.',
+    'I am thankful to be me.',
+    'I believe I have unlimited potential.',
+    'I believe in me.',
+    'I will never, never, never, never give up in what I believe.',
+    'The answers lie within me and are found all around me.',
+    'I live in a world of abundance.',
+    'I love living and live loving.',
+    'I make my visions into dreams, and my dreams into reality.',
+    'My past builds me a better today.',
+    'Crisis makes good outcomes possible.',
   ];
   var INTERVAL_MS = 8000;
 
