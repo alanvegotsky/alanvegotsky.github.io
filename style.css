@@ -224,6 +224,36 @@ body {
   margin: 18px 0 0;
 }
 
+
+/* Dedication */
+.dedication {
+  font-family: var(--ds-font-display);
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ds-ink-2);
+  margin: 0 0 20px;
+  max-width: 460px;
+}
+
+/* Ken Vegotsky quotes */
+.quote {
+  margin: 0 0 14px;
+  padding: 12px 18px;
+  border-left: 2px solid var(--ds-teal);
+  background: var(--ds-white);
+  border-radius: 0 14px 14px 0;
+  box-shadow: var(--ds-lift);
+}
+.quote p {
+  margin: 0;
+  font-family: var(--ds-font-display);
+  font-size: 17px;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+.quote cite, .para cite { font-style: italic; }
+
 /* Closing */
 .closing {
   margin-top: 48px;
