@@ -328,3 +328,10 @@ body {
   border-color: var(--ds-teal);
   color: #fff;
 }
+
+/* Tall embeds (SoundCloud set player) */
+.media-frame-set {
+  aspect-ratio: auto;
+  height: 450px;
+  background: var(--ds-white);
+}
