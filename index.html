@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A positive frame of mind</title>
+<meta name="description" content="One quiet reminder at a time. A positive frame of mind.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+  <header class="head">
+    <h1 class="head-title">A positive frame of mind</h1>
+    <p class="head-intro">One good thought at a time. It changes on its own every few seconds, or tap the words for the next one. Let them lift you.</p>
+  </header>
+
+  <div class="mind-stage">
+    <svg class="figure-svg" viewBox="0 0 560 620" aria-hidden="true">
+      <defs>
+        <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#f1e8df"/>
+          <stop offset="1" stop-color="#dcc9ba"/>
+        </linearGradient>
+        <radialGradient id="ground" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#4d3533" stop-opacity="0.14"/>
+          <stop offset="1" stop-color="#4d3533" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <ellipse class="ground-shadow" cx="280" cy="606" rx="215" ry="24" fill="url(#ground)"/>
+      <path class="bust" fill="url(#skin)" d="M 70 620 C 70 510, 155 440, 235 415 L 245 362 C 245 354, 242 346, 236 340 C 175 307, 130 262, 130 205 C 130 122, 197 55, 280 55 C 363 55, 430 122, 430 205 C 430 262, 385 307, 324 340 C 318 346, 315 354, 315 362 L 325 415 C 405 440, 490 510, 490 620 Z"/>
+    </svg>
+
+    <div class="aff-orb" id="orb" role="button" tabindex="0" aria-label="Show the next affirmation">
+      <img class="aff-bg" src="photos/dawn-lake.png" alt="" aria-hidden="true">
+      <div class="aff-scrim" aria-hidden="true"></div>
+      <div class="aff-breathe" aria-hidden="true"></div>
+      <p class="aff-text" id="affText"></p>
+    </div>
+
+    <svg class="ring-svg" viewBox="0 0 100 100" aria-hidden="true">
+      <circle class="ring-track" cx="50" cy="50" r="48.6"/>
+      <circle class="ring-fill" id="ringFill" cx="50" cy="50" r="48.6"/>
+    </svg>
+  </div>
+
+  <div class="aff-controls">
+    <button type="button" class="aff-btn" id="btnPrev" aria-label="Previous affirmation">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button type="button" class="aff-btn" id="btnPlay" aria-label="Pause the cycle">
+      <svg id="iconPause" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 5v14M15 5v14"/></svg>
+      <svg id="iconPlay" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="display:none"><path d="M8 5.5v13l11-6.5z"/></svg>
+    </button>
+    <button type="button" class="aff-btn" id="btnNext" aria-label="Next affirmation">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+    </button>
+  </div>
+
+  <section class="group">
+    <h2 class="group-label">Why the words</h2>
+    <figure class="figure">
+      <img src="photos/water-crystal.jpg" alt="A real snowflake photographed up close, a perfectly symmetrical ice crystal.">
+      <figcaption>A real water crystal, photographed up close. Photo: Alexey Kljatov, CC BY 2.0.</figcaption>
+    </figure>
+    <p class="para">
+      In the 1990s, Japanese researcher Dr. Masaru Emoto froze water and photographed the crystals.
+      He reported that water exposed to kind words, prayer and gentle music formed beautiful,
+      symmetrical shapes, while water met with harsh words formed broken, chaotic ones.
+    </p>
+    <p class="para">
+      Science has never confirmed his results, so take them as poetry rather than proof. But the image
+      is a good one to carry: your body is mostly water. If words can shape water, then the ones you
+      soak in, including the ones you say to yourself, are worth choosing kindly. That is the whole
+      idea behind this page.
+    </p>
+    <p class="para">
+      Curious? <a class="link" href="https://masaru-emoto.net/en/mfw/">Emoto's original crystal photos</a> are on his site.
+    </p>
+    <p class="caption">Inspired by the water research of Dr. Masaru Emoto. Shared as inspiration, not medical or scientific advice.</p>
+  </section>
+
+  <footer class="closing">Made for the minutes that need a lift. Come back whenever.</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
