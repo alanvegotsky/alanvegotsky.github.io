@@ -154,3 +154,41 @@
     picker.appendChild(btn);
   });
 })();
+
+/* Cute animal slideshow */
+(function () {
+  var SLIDES = [
+    { src: 'photos/kitten.jpg', alt: 'A tiny calico kitten held in cupped hands',
+      artist: 'Leo Rodman', lic: 'CC0', url: 'https://commons.wikimedia.org/wiki/File:A_kitten_in_the_hand_(Flickr).jpg' },
+    { src: 'photos/corgi.jpg', alt: 'A happy corgi puppy standing on its hind legs with its tongue out',
+      artist: 'Huoadg5888', lic: 'CC0', url: 'https://commons.wikimedia.org/wiki/File:Fawn_and_white_Welsh_Corgi_puppy_standing_on_rear_legs_and_sticking_out_the_tongue.jpg' },
+    { src: 'photos/puppies.jpg', alt: 'Two puppies playing together at golden hour',
+      artist: 'Basile Morin', lic: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Two_puppies_playing_together_one_standing_over_the_other_at_golden_hour_in_Don_Det_Laos.jpg' },
+    { src: 'photos/redpanda.jpg', alt: 'A red panda resting on a tree branch',
+      artist: 'Mathias Appel', lic: 'CC0', url: 'https://commons.wikimedia.org/wiki/File:Red_Panda_(24986761703).jpg' },
+    { src: 'photos/bunny.jpg', alt: 'A cream-colored rabbit sitting in green grass',
+      artist: 'William Warby', lic: 'CC BY 2.0', url: 'https://commons.wikimedia.org/wiki/File:Bunny_rabbit_at_Alligator_Bay,_Beauvoir,_France.jpg' }
+  ];
+  var img = document.getElementById('cutePhoto');
+  var credit = document.getElementById('cuteCredit');
+  if (!img || !credit) return;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var i = 0;
+  SLIDES.forEach(function (s) { var pre = new Image(); pre.src = s.src; });
+  function show(n) {
+    var s = SLIDES[n];
+    img.src = s.src;
+    img.alt = s.alt;
+    credit.innerHTML = 'Photo: <a class="link" href="' + s.url + '">' + s.artist + '</a>, ' + s.lic + ', via Wikimedia Commons';
+  }
+  function next() {
+    img.classList.add('fading');
+    setTimeout(function () {
+      i = (i + 1) % SLIDES.length;
+      show(i);
+      img.onload = function () { img.classList.remove('fading'); };
+      if (img.complete) img.classList.remove('fading');
+    }, 900);
+  }
+  if (!reduced) setInterval(function () { if (!document.hidden) next(); }, 6000);
+})();
