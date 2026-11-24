@@ -254,6 +254,34 @@ body {
 }
 .quote cite, .para cite { font-style: italic; }
 
+/* Good news stories */
+.story {
+  margin: 0 0 14px;
+  padding: 14px 18px;
+  background: var(--ds-white);
+  border-radius: 14px;
+  box-shadow: var(--ds-lift);
+}
+.story-title {
+  font-family: var(--ds-font-display);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin: 0 0 6px;
+}
+.story-text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+.story-src {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ds-ink-2);
+  margin: 0;
+}
+
 /* Closing */
 .closing {
   margin-top: 48px;
